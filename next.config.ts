@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const isProd = process.env.NODE_ENV === 'production'
+const basePath = isProd ? "/homepage_test" : ""
 
 const nextConfig: NextConfig = {
   // 静的サイトとしてエクスポート
@@ -11,10 +12,11 @@ const nextConfig: NextConfig = {
     unoptimized: true
   },
 
-  ...(isProd && {
-    basePath: "/homepage_test",
-    assetPrefix: "/homepage_test/"
-  })
+  basePath: basePath,
+  assetPrefix: basePath,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath
+  }
 };
 
 export default nextConfig;
