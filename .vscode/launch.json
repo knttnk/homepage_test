@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Next.js Browser Debug",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}",
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Next.js Dev + Chrome",
+            "configurations": [ "Next.js Browser Debug" ],
+            "preLaunchTask": "nextjs-dev"
+        }
+    ]
+}
