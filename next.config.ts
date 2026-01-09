@@ -12,8 +12,8 @@ const nextConfig: NextConfig = {
   },
 
   ...(isProd && {
-    basePath: "/my-website",
-    assetPrefix: "/my-website/"
+    basePath: "/homepage_test",
+    assetPrefix: "/homepage_test/"
   })
 };
 
