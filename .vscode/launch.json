@@ -22,6 +22,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
+            "preLaunchTask": "npm: build",
             "serverReadyAction": {
                 "action": "debugWithChrome",
                 "pattern": "- Local:.+(https?://.+)",
