@@ -1,6 +1,16 @@
-import { redirect } from "next/navigation";
+"use client";
 
-// `/` に来たら即座に `/ja` へリダイレクトする
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+
+// Static export doesn't support server-side redirects.
+// Do a client-side redirect to the default locale.
 export default function RootPage() {
-  redirect("/ja");
+  const router = useRouter();
+
+  useEffect(() => {
+    router.replace("/ja");
+  }, [router]);
+
+  return null;
 }

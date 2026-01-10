@@ -14,10 +14,9 @@ export default async function LocaleLayout({ children, params }: Props) {
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
-  const t = await getTranslations("HomePage");
-
-  // Enable static rendering
   setRequestLocale(locale);
+
+  const t = await getTranslations("HomePage");
 
   return (
     <html lang={locale}>

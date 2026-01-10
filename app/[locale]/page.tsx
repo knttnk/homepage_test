@@ -1,13 +1,17 @@
-import { use } from "react";
 import { setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
 import { routing } from "@/i18n/routing";
+import { use } from "react";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-export default function IndexPage(params: Promise<{ locale: string }>) {
+export default function IndexPage({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = use(params);
 
   // Enable static rendering
