@@ -5,7 +5,7 @@
             "name": "Next.js Browser Debug",
             "type": "chrome",
             "request": "launch",
-            "url": "http://localhost:3000",
+            "url": "http://localhost:3000/ja",
             "webRoot": "${workspaceFolder}",
         }
     ],
