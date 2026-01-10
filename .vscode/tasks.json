@@ -2,11 +2,27 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "nextjs-dev",
+            "label": "Serve out (npx serve out)",
             "type": "shell",
-            "command": "npm run dev",
+            "command": "npx serve out -l 3000",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
             "isBackground": true,
-            "problemMatcher": [ ]
+            "dependsOn": "Build (npm run build)",
+            "problemMatcher": {
+                "owner": "custom",
+                "pattern": [
+                    {
+                        "regexp": ".*"
+                    }
+                ],
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "Serving!|Accepting connections|Local:",
+                    "endsPattern": "Local:\\s+https?:\\/\\/"
+                }
+            }
         }
     ]
 }
