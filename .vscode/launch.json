@@ -8,7 +8,7 @@
             "cwd": "${workspaceFolder}",
             "runtimeExecutable": "node",
             "runtimeArgs": [
-                "--inspect-brk",
+                "--inspect",
                 "--enable-source-maps"
             ],
             "program": "${workspaceFolder}/node_modules/next/dist/bin/next",
