@@ -7,7 +7,7 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-export default function IndexPage({ params }) {
+export default function IndexPage(params: Promise<{ locale: string }>) {
   const { locale } = use(params);
 
   // Enable static rendering
