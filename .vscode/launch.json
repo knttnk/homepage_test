@@ -2,7 +2,47 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Build: npm run build (debug)",
+            "name": "full_stack",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "runtimeExecutable": "node",
+            "runtimeArgs": [
+                "--inspect",
+                "--enable-source-maps"
+            ],
+            "program": "${workspaceFolder}/node_modules/next/dist/bin/next",
+            "args": [
+                "dev"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "autoAttachChildProcesses": true,
+            "sourceMaps": true,
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "serverReadyAction": {
+                "action": "debugWithChrome",
+                "pattern": "- Local:.+(https?://.+)",
+                "uriFormat": "%s",
+                "webRoot": "${workspaceFolder}"
+            }
+        },
+        {
+            "name": "client",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}",
+            "sourceMaps": true,
+            "resolveSourceMapLocations": [
+                "${workspaceFolder}/**",
+                "!**/node_modules/**"
+            ]
+        },
+        {
+            "name": "build",
             "type": "node",
             "request": "launch",
             "cwd": "${workspaceFolder}",
