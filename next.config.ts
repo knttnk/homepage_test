@@ -1,8 +1,13 @@
 import type { NextConfig } from "next";
 import createNextIntlPlugin from 'next-intl/plugin';
 
-const isProd = process.env.NODE_ENV === 'production'
-const basePath = isProd ? "/homepage_test" : ""
+// GitHub Pages では，リポジトリ名をベースパスとして使用
+const isGitHubActions = process.env.GITHUB_ACTIONS === 'true'
+const basePath = isGitHubActions ? '/homepage_test' : ''
+
+// ソースマップを作成
+const isProduction = process.env.NODE_ENV === 'production';
+process.env.GENERATE_SOURCEMAP = isProduction ? 'true' : 'false';
 
 const nextConfig: NextConfig = {
   // 静的サイトとしてエクスポート
