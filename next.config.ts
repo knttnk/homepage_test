@@ -17,6 +17,15 @@ const nextConfig: NextConfig = {
     unoptimized: true  // GitHub Pages では _next の最適化機能を利用できないため無効
   },
 
+  productionBrowserSourceMaps: isProduction,
+  webpack: (config, { dev, isServer }) => {
+    // サーバーサイド(Node.js)のソースマップ
+    if (!dev) {
+      config.devtool = 'source-map';
+    }
+    return config;
+  },
+
   basePath: basePath,
   assetPrefix: basePath,
   env: {

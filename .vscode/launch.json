@@ -1,55 +1,24 @@
 {
     "version": "0.2.0",
+    "compounds": [
+        {
+            "name": "preview (static export)",
+            "configurations": [
+                "serve (out)",
+                "client (chrome)"
+            ],
+            "stopAll": true
+        }
+    ],
     "configurations": [
         {
-            "name": "full_stack",
+            "name": "build (next build debug)",
             "type": "node",
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "runtimeExecutable": "node",
             "runtimeArgs": [
-                "--inspect",
-                "--enable-source-maps"
-            ],
-            "program": "${workspaceFolder}/node_modules/next/dist/bin/next",
-            "args": [
-                "dev"
-            ],
-            "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen",
-            "autoAttachChildProcesses": true,
-            "sourceMaps": true,
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "preLaunchTask": "npm: build",
-            "serverReadyAction": {
-                "action": "debugWithChrome",
-                "pattern": "- Local:.+(https?://.+)",
-                "uriFormat": "%s",
-                "webRoot": "${workspaceFolder}"
-            }
-        },
-        {
-            "name": "client",
-            "type": "chrome",
-            "request": "launch",
-            "url": "http://localhost:3000",
-            "webRoot": "${workspaceFolder}",
-            "sourceMaps": true,
-            "resolveSourceMapLocations": [
-                "${workspaceFolder}/**",
-                "!**/node_modules/**"
-            ]
-        },
-        {
-            "name": "build",
-            "type": "node",
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "runtimeExecutable": "node",
-            "runtimeArgs": [
-                "--inspect",
+                "--inspect-brk",
                 "--enable-source-maps"
             ],
             "program": "${workspaceFolder}/node_modules/next/dist/bin/next",
@@ -60,17 +29,37 @@
             "internalConsoleOptions": "neverOpen",
             "autoAttachChildProcesses": true,
             "sourceMaps": true,
-            "outFiles": [
-                "${workspaceFolder}/.next/**/*.js",
-                "!**/node_modules/**"
-            ],
-            "resolveSourceMapLocations": [
-                "${workspaceFolder}/**",
-                "!**/node_modules/**"
-            ],
             "skipFiles": [
                 "<node_internals>/**"
             ]
         },
+        {
+            "name": "serve (out)",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "runtimeExecutable": "npx",
+            "runtimeArgs": [
+                "serve@latest",
+                "out",
+                "-l",
+                "3000"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "autoAttachChildProcesses": true
+        },
+        {
+            "name": "client (chrome)",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}",
+            "sourceMaps": true,
+            "resolveSourceMapLocations": [
+                "${workspaceFolder}/**",
+                "!**/node_modules/**"
+            ]
+        }
     ]
 }
