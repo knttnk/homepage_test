@@ -2,14 +2,13 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "build (next build debug)",
+            "name": "ビルド",
             "type": "node",
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "runtimeExecutable": "node",
             "runtimeArgs": [
                 "--inspect",
-                "--enable-source-maps"
             ],
             "program": "${workspaceFolder}/node_modules/next/dist/bin/next",
             "args": [
@@ -24,19 +23,18 @@
             ]
         },
         {
-            "name": "debug (out) in Chrome",
+            "name": "Chromeで起動",
             "type": "chrome",
-            "preLaunchTask": "serve:out",
+            "preLaunchTask": "サーブ開始",
             "request": "launch",
-            "url": "http://localhost:3000",
+            "url": "http://localhost:3000/",
             "webRoot": "${workspaceFolder}",
-            "sourceMaps": true,
-            "sourceMapPathOverrides": {
-                "webpack://_N_E/./*": "${webRoot}/*",
-                "webpack://_N_E/*": "${webRoot}/*",
-                "webpack:///./*": "${webRoot}/*",
-                "webpack:///*": "${webRoot}/*"
-            }
+            "skipFiles": [
+                "chrome-extension://**"
+            ],
+            "runtimeArgs": [
+                "--auto-open-devtools-for-tabs",
+            ]
         }
     ]
 }

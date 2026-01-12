@@ -4,9 +4,22 @@
         {
             "type": "npm",
             "script": "serve:out",
-            "problemMatcher": "$tsc-watch",
-            "label": "serve:out",
+            "label": "サーブ開始",
             "isBackground": true,
+            "problemMatcher": [
+                "$tsc", "$tsc-watch", "$node-sass",
+                {
+                    "owner": "custom",
+                    "pattern": {
+                        "regexp": "^$"
+                    },
+                    "background": {
+                        "activeOnStart": true,
+                        "beginsPattern": "^$",
+                        "endsPattern": "Serving!"
+                    }
+                }
+            ]
         }
     ]
 }
