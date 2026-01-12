@@ -6,7 +6,7 @@ import { getTranslations } from "next-intl/server";
 import { Metadata } from "next";
 import { metadataFrom } from "../../metadata";
 
-export async function generatseMetadata(
+export async function generateMetadata(
   params: Promise<{
     locale: string;
   }>
