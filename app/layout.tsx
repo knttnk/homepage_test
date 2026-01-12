@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { metadataFrom } from "./metadata";
+import { routing } from "@/i18n/routing";
 
 export async function generateMetadata(
   params: Promise<{
@@ -7,7 +8,7 @@ export async function generateMetadata(
   }>
 ): Promise<Metadata> {
   const { locale } = await params;
-  return metadataFrom({ locale, root: "/" });
+  return metadataFrom({ locale: locale ?? routing.defaultLocale, root: "/" });
 }
 
 export default async function Layout({
