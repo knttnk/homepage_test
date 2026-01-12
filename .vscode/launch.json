@@ -24,20 +24,19 @@
             ]
         },
         {
-            "name": "serve (out)",
-            "type": "node",
+            "name": "debug (out) in Chrome",
+            "type": "chrome",
+            "preLaunchTask": "serve:out",
             "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "runtimeExecutable": "npx",
-            "runtimeArgs": [
-                "serve@latest",
-                "out",
-                "-l",
-                "3000"
-            ],
-            "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen",
-            "autoAttachChildProcesses": true
-        },
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}",
+            "sourceMaps": true,
+            "sourceMapPathOverrides": {
+                "webpack://_N_E/./*": "${webRoot}/*",
+                "webpack://_N_E/*": "${webRoot}/*",
+                "webpack:///./*": "${webRoot}/*",
+                "webpack:///*": "${webRoot}/*"
+            }
+        }
     ]
 }

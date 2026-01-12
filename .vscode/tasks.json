@@ -1,4 +1,12 @@
 {
-  "version": "2.0.0",
-  "tasks": []
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "npm",
+            "script": "serve:out",
+            "problemMatcher": "$tsc-watch",
+            "label": "serve:out",
+            "isBackground": true,
+        }
+    ]
 }
