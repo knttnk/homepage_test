@@ -32,5 +32,12 @@ export default function RootPage() {
     router.replace(`/${detectLanguage()}`);
   }, [router]);
 
-  return null;
+  return (
+    <html lang="en">
+      <body>
+        <p>Redirecting...</p>
+        <p>You should enable JavaScript to use this site.</p>
+      </body>
+    </html>
+  );
 }
