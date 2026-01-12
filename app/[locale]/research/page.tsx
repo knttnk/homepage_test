@@ -8,7 +8,7 @@ export function generateStaticParams() {
 }
 
 export default function IndexPage({
-  params
+  params,
 }: {
   params: Promise<{ locale: string }>;
 }) {
@@ -23,7 +23,7 @@ export default function IndexPage({
 
   return (
     <div style={{ padding: 20 }}>
-      <div>Current locale: {locale}</div>
+      <div>研究ページ: {locale}</div>
       <div>{t("title")}</div>
     </div>
   );

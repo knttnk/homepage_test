@@ -32,9 +32,9 @@ export default async function LocaleLayout({
 
   return (
     <body>
-      <head>
-        <div style={{ padding: 20 }}>ホーム: {locale}</div>
-      </head>
+      <header>
+        <div style={{ padding: 20 }}>ホームのヘッダー: {locale}</div>
+      </header>
       {children}
     </body>
   );

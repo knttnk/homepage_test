@@ -31,9 +31,9 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <body>
-      <head>
-        <div style={{ padding: 20 }}>けんきゅうだ！: {locale}</div>
-      </head>
+      <header>
+        <div style={{ padding: 20 }}>けんきゅうだ！ﾍｯﾀﾞｰ: {locale}</div>
+      </header>
       {children}
     </body>
   );
