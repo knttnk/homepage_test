@@ -1,4 +1,11 @@
 {
+    "Manifest": {
+        "name": "大阪大学 田中健太のホームページ",
+        "description": "大阪大学 田中健太のホームページ"
+    },
+    "Metadata": {
+        "title": "大阪大学 田中健太のホームページ"
+    },
     "HomePage": {
         "title": "こんにちはー"
     }
