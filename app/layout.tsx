@@ -1,3 +1,5 @@
+import "./globals.css";
+
 import { Metadata } from "next";
 import { metadataFrom } from "./metadata";
 import { routing } from "@/i18n/routing";
