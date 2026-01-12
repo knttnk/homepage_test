@@ -31,11 +31,11 @@ export default async function LocaleLayout({
   const t = await getTranslations("HomePage");
 
   return (
-    <body>
+    <>
       <header>
         <div style={{ padding: 20 }}>ホームのヘッダー: {locale}</div>
       </header>
       {children}
-    </body>
+    </>
   );
 }

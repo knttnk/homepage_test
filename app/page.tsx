@@ -33,11 +33,9 @@ export default function RootPage() {
   }, [router]);
 
   return (
-    <html lang="en">
-      <body>
-        <p>Redirecting...</p>
-        <p>You should enable JavaScript to use this site.</p>
-      </body>
-    </html>
+    <>
+      <p>Redirecting...</p>
+      <p>You should enable JavaScript to use this site.</p>
+    </>
   );
 }
