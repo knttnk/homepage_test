@@ -4,6 +4,9 @@ import { Metadata } from "next";
 import { metadataFrom } from "./metadata";
 import { routing } from "@/i18n/routing";
 
+import { Providers } from "@/components/providers";
+import { ThemeSwitcher } from "@/components/theme-switcher";
+
 export async function generateMetadata(
   params: Promise<{
     locale: string;
@@ -19,9 +22,12 @@ export default async function Layout({
   children: React.ReactNode;
 }) {
   return (
-    <html>
+    <html suppressHydrationWarning>
       <body>
-        <main>{children}</main>
+        <Providers>
+          <ThemeSwitcher />
+          {children}
+        </Providers>
       </body>
     </html>
   );
