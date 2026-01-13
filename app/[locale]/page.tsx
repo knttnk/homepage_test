@@ -25,11 +25,11 @@ export default function IndexPage({
 
   return (
     <>
-      <SidebarNav>
-        <SidebarTrigger />
-      </SidebarNav>
+      <SidebarNav></SidebarNav>
       <Text>ホーム</Text>
-      <Text>いえあ</Text>
+      {Array.from({ length: 399 }).map((_, i) => (
+        <Text key={i}>あああ</Text>
+      ))}
     </>
   );
 }

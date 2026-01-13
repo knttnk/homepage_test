@@ -7,7 +7,7 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-export default function IndexPage({
+export default function ResearchPage({
   params,
 }: {
   params: Promise<{ locale: string }>;
