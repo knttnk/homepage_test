@@ -2,6 +2,8 @@ import { setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
 import { routing } from "@/i18n/routing";
 import { use } from "react";
+import { SidebarNav, SidebarTrigger } from "@/components/ui/sidebar";
+import { Text } from "@/components/ui/text";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -22,9 +24,12 @@ export default function IndexPage({
   const t = useTranslations("HomePage");
 
   return (
-    <div style={{ padding: 20 }}>
-      <div>ホーム: {locale}</div>
-      <div>{t("title")}</div>
-    </div>
+    <>
+      <SidebarNav>
+        <SidebarTrigger />
+      </SidebarNav>
+      <Text>ホーム</Text>
+      <Text>いえあ</Text>
+    </>
   );
 }

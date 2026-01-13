@@ -3,6 +3,8 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import { SidebarNav, SidebarTrigger } from "@/components/ui/sidebar";
+import { Text } from "@/components/ui/text";
 
 /** ブラウザの言語設定を検出し、対応する言語コードを返す．
  *  わからなければ "ja" を返す．
@@ -34,8 +36,9 @@ export default function RootPage() {
 
   return (
     <>
-      <p>Redirecting...</p>
-      <p>You should enable JavaScript to use this site.</p>
+      <SidebarNav></SidebarNav>
+      <Text>Redirecting...</Text>
+      <Text>You should enable JavaScript to use this site.</Text>
     </>
   );
 }
