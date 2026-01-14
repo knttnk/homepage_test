@@ -25,7 +25,6 @@ export default function IndexPage({
 
   return (
     <>
-      <SidebarNav></SidebarNav>
       <Text>ホーム</Text>
       {Array.from({ length: 399 }).map((_, i) => (
         <Text key={i}>あああ</Text>

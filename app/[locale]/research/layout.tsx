@@ -29,12 +29,5 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   const t = await getTranslations("HomePage");
 
-  return (
-    <>
-      <header>
-        <div style={{ padding: 20 }}>けんきゅうだ！ﾍｯﾀﾞｰ: {locale}</div>
-      </header>
-      {children}
-    </>
-  );
+  return children;
 }
