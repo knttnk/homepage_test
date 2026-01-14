@@ -20,8 +20,8 @@ import { SidebarProvider } from '@/components/ui/sidebar';
 import { Link } from '@/components/ui/link';
 import { Heading } from '@/components/ui/heading';
 import { Breadcrumbs, BreadcrumbsItem } from '@/components/ui/breadcrumbs';
-import { HomeIcon, AcademicCapIcon, BookOpenIcon } from '@heroicons/react/24/solid';
-import MyNavBar from '@/components/my-nav-bar';
+import { HomeIcon, AcademicCapIcon, BookOpenIcon, Bars3Icon } from '@heroicons/react/24/solid';
+import { Header } from '@/components/header';
 
 export async function generateMetadata(
 	params: Promise<{
@@ -39,7 +39,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
 			<SidebarProvider defaultOpen={true} isOpen={true}>
 				<Sidebar collapsible="dock" side="left" closeButton={true} intent="default">
 					<SidebarHeader>
-						<Link href="https://knttnk.github.io/homepage/">
+						<Link href={`/${locale}/`}>
 							<SidebarLabel>田中 健太</SidebarLabel>
 						</Link>
 					</SidebarHeader>
@@ -62,6 +62,12 @@ export default async function LocaleLayout({ children, params }: { children: Rea
 					</SidebarContent>
 				</Sidebar>
 				<SidebarInset>
+					<Header>
+						<SidebarTrigger />
+						<Link href={`/${locale}/`} className="font-semibold">
+							<Heading level={1}>田中 健太</Heading>
+						</Link>
+					</Header>
 					<div className="p-4 lg:p-6">{children}</div>
 				</SidebarInset>
 			</SidebarProvider>
