@@ -1,3 +1,20 @@
 {
-    "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "[typescript][typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.printWidth": 150,
+    "prettier.semi": true,
+    "prettier.singleQuote": true,
+    "prettier.trailingComma": "all",
+    "prettier.useTabs": true
+  },
+  "[json][jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "other": "on",
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace"
+  },
 }
