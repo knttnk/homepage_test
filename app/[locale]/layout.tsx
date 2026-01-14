@@ -64,7 +64,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
 				<SidebarInset>
 					<Header>
 						<SidebarTrigger />
-						<Link href={`/${locale}/`} className="font-semibold">
+						<Link href={`/${locale}/`}>
 							<Heading level={1}>田中 健太</Heading>
 						</Link>
 					</Header>
