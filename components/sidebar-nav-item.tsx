@@ -1,11 +1,12 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import { SidebarItem } from '@/components/ui/sidebar';
+import { SidebarItem, useSidebar } from '@/components/ui/sidebar';
 import type { ComponentProps } from 'react';
 
 export function SidebarNavItem({ href, ...props }: ComponentProps<typeof SidebarItem>) {
 	const pathname = usePathname();
+	const { setIsOpenOnMobile } = useSidebar();
 	let isCurrent = false;
 
 	if (typeof href === 'string' && pathname) {
@@ -19,5 +20,14 @@ export function SidebarNavItem({ href, ...props }: ComponentProps<typeof Sidebar
 		}
 	}
 
-	return <SidebarItem isCurrent={isCurrent} href={href} {...props} />;
+	return (
+		<SidebarItem
+			isCurrent={isCurrent}
+			href={href}
+			onPress={(e) => {
+				setIsOpenOnMobile(false);
+			}}
+			{...props}
+		/>
+	);
 }
