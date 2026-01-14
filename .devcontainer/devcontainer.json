@@ -12,12 +12,8 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": [
-		"apt-get update",
-		"apt-get install git -y",
-		"npm install",
-		// "npm install -g "
-	],
+	"postAttachCommand": "apt-get update && apt-get install -y git && npm install",
+
 
 	// Configure tool-specific properties.
 	"customizations": {

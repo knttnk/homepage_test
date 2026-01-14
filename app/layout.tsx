@@ -19,10 +19,8 @@ export default async function Layout({
   children: React.ReactNode;
 }) {
   return (
-    <html>
-      <body>
-        <main>{children}</main>
-      </body>
+    <html suppressHydrationWarning>
+      <body>{children}</body>
     </html>
   );
 }
