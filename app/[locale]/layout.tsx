@@ -22,6 +22,7 @@ import { Heading } from '@/components/ui/heading';
 import { Breadcrumbs, BreadcrumbsItem } from '@/components/ui/breadcrumbs';
 import { HomeIcon, AcademicCapIcon, BookOpenIcon, Bars3Icon } from '@heroicons/react/24/solid';
 import { Header } from '@/components/header';
+import { InsetPadding } from '@/components/inset-padding';
 
 export async function generateMetadata(
 	params: Promise<{
@@ -68,7 +69,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
 							<Heading level={1}>田中 健太</Heading>
 						</Link>
 					</Header>
-					<div className="p-4 lg:p-6">{children}</div>
+					<InsetPadding>{children}</InsetPadding>
 				</SidebarInset>
 			</SidebarProvider>
 		</Providers>
