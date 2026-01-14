@@ -7,13 +7,13 @@ import {
 	SidebarFooter,
 	SidebarHeader,
 	SidebarInset,
-	SidebarItem,
 	SidebarLabel,
 	SidebarNav,
 	SidebarRail,
 	SidebarSection,
 	SidebarTrigger,
 } from '@/components/ui/sidebar';
+import { SidebarNavItem } from '@/components/sidebar-nav-item';
 import { Providers } from '@/components/providers';
 import { ThemeSwitcher } from '@/components/theme-switcher';
 import { SidebarProvider } from '@/components/ui/sidebar';
@@ -46,19 +46,19 @@ export default async function LocaleLayout({ children, params }: { children: Rea
 					</SidebarHeader>
 					<SidebarContent>
 						<SidebarSection label="研究">
-							<SidebarItem isCurrent={true} href={`/${locale}/`}>
+							<SidebarNavItem href={`/${locale}/`}>
 								<HomeIcon />
 								<SidebarLabel>Home</SidebarLabel>
-							</SidebarItem>
-							<SidebarItem isCurrent={false} href={`/${locale}/research`}>
+							</SidebarNavItem>
+							<SidebarNavItem href={`/${locale}/research`}>
 								<AcademicCapIcon />
 								<SidebarLabel>Research</SidebarLabel>
-							</SidebarItem>
+							</SidebarNavItem>
 						</SidebarSection>
 						<SidebarSection label="その他">
-							<SidebarItem isCurrent={true} href={`/${locale}/about`}>
+							<SidebarNavItem href={`/${locale}/about`}>
 								<SidebarLabel>About</SidebarLabel>
-							</SidebarItem>
+							</SidebarNavItem>
 						</SidebarSection>
 					</SidebarContent>
 				</Sidebar>
