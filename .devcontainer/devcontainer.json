@@ -12,7 +12,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postAttachCommand": "apt-get update && apt-get install -y git && npm install",
+	"postAttachCommand": "apt-get update && apt-get install -y git && npm install && npm install -g serve",
 
 
 	// Configure tool-specific properties.
@@ -22,7 +22,6 @@
 			"extensions": [
 				"dbaeumer.vscode-eslint",
 				"esbenp.prettier-vscode",
-				"ms-vscode.vscode-typescript-next",
 				"bradlc.vscode-tailwindcss",
 			]
 		}
