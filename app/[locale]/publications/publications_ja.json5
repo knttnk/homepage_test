@@ -1,0 +1,139 @@
+{
+  "journal_papers": {
+    "2024_SoftwareX": {
+      // 査読あり
+      "year": 2024,
+      "month": 6,
+      "day": null,
+      "str": "Kenta Tanaka, Yuki Minami, Masato Ishikawa: NQLib: A Python Library for Noise-Shaping Quantizer Synthesis; SoftwareX, Vol. 27, 101792 (2024/06)",
+      "url": "https://doi.org/10.1016/j.softx.2024.101792"
+    },
+    "2024_ISCIE": {
+      // 査読あり
+      "year": 2024,
+      "month": 8,
+      "day": null,
+      "str": "田中 健太，南 裕樹，石川 将人：情報改変による強化学習の効率化：倒立振子の安定化制御を例として；システム制御情報学会論文誌，Vol. 37, No. 8, pp. 234–236 (2024/08)",
+      "url": "https://doi.org/10.5687/iscie.37.234"
+    },
+    "2025_IEEE": {
+      // 査読あり
+      "year": 2025,
+      "month": 5,
+      "day": null,
+      "str": "Kenta Tanaka, Yuki Minami, Masato Ishikawa: Operability improvement of Human-machine Systems by Altering Visual Information: A Case-study of the Inverted Pendulum; IEEE Access, Vol. 13, pp. 93566–93573 (2025/05)",
+      "url": "https://doi.org/10.1109/ACCESS.2025.3572082"
+    },
+  },
+  "international_conference": {
+    "2021_SICE_AC": {
+      // 査読あり
+      // 口頭発表
+      "year": 2021,
+      "month": 8,
+      "day": null,
+      "str": "Kenta Tanaka, Yuki Minami, Masato Ishikawa: NQLib: Python Library for the Practical Design of Noise Shaping Quantizers; in 2021 SICE Annual Conference, pp. 814–816 (2021/08)",
+      "url": null,
+    },
+    "2024_AROB": {
+      // 査読あり
+      // 口頭発表
+      "year": 2024,
+      "month": 1,
+      "day": null,
+      "str": "Kenta Tanaka, Yuki Minami, Masato Ishikawa: Improving Controllability of Manual Control Systems by Altering Visual Information; in 29th International Symposium on Artificial Life and Robotics, pp. 356–359 (2024)",
+      "url": null,
+    },
+    "2025_SICE_Festival": {
+      // クイックレビューあり
+      // ポスター発表
+      "year": 2025,
+      "month": 9,
+      "day": null,
+      "str": "Kenta Tanaka, Yuki Minami, Masato Ishikawa: Reinforcement Learning-Based Analysis of the Effect of Presenting Predicted State on Operability of 2nd-Order LTI Systems in Human-Machine Systems; in 2025 SICE Festival with Annual Conference, ThAT11.18 (2025)",
+      "url": null,
+    },
+  },
+  "domestic_conference": {
+    "2020_SICE": {
+      // 査読なし
+      // オンライン口頭発表
+      "year": 2020,
+      "month": 11,
+      "day": null,
+      "str": "田中 健太，南 裕樹，石川 将人：ノイズシェーピング量子化器設計のための Python ライブラリ NQLib の開発；第 63 回自動制御連合講演会, pp. 474–477 (2020)",
+      "url": "https://doi.org/10.11511/jacc.63.0_474",
+    },
+    "2022_SICE": {
+      // 査読なし
+      // 口頭発表
+      "year": 2022,
+      "month": 11,
+      "day": null,
+      "str": "田中 健太，南 裕樹，石川 将人：人間機械系の制御性能向上のための視覚情報の改変；第 65 回 自動制御連合講演会, pp. 824–827 (2022)",
+      "url": "https://doi.org/10.11511/jacc.65.0_824",
+    },
+    "2024_MSCS": {
+      // 査読なし
+      "year": 2024,
+      "month": 3,
+      "day": null,
+      "str": "南 裕樹，田中 健太，荻尾 優吾：Python を用いた制御系設計：えっ！ そんなことできるの？；第11回計測自動制御学会制御部門マルチシンポジウム, 3A7–2 (2024)",
+      "url": null,
+    },
+    "2025_MSCS": {
+      // 査読なし
+      "year": 2025,
+      "month": 3,
+      "day": null,
+      "str": "田中 健太，南 裕樹，石川 将人： 不安定零点を有する動的システムの手動制御のための視覚情報改変； 第12回計測自動制御学会制御部門マルチシンポジウム, 1PS2–17 (2025)",
+      "url": null,
+    },
+  },
+  "awards": {
+    "2021_SHASE_Student": {
+      "year": 2021,
+      "month": 4,
+      "day": 11,
+      "str": "空気調和・衛生工学会振興賞学生賞 (2020年度)",
+      "url": "https://www.shasej.org/award/award2021/award2021new.html",
+    },
+    "2023_SICE_Student": {
+      "year": 2023,
+      "month": 3,
+      "day": null,
+      "str": "計測自動制御学会優秀学生賞 (2022年度)",
+      "url": "https://www.sice.jp/act/awards/",
+    },
+    "2025_MSCS_poster": {
+      "year": 2025,
+      "month": 3,
+      "day": 4,
+      "str": "計測自動制御学会 マルチシンポジウム優秀ポスター発表賞 (2025)",
+      "url": "https://www.sice-ctrl.jp/about/award/honorees/",
+    },
+  },
+  "others": {
+    "2021_Minidrone": {
+      "year": 2021,
+      "month": 9,
+      "day": 1,
+      "str": "MathWorks Minidrone Competition Japan 2021 決勝進出",
+      "url": null,
+    },
+    "2023_NextGenResearcher": {
+      "year": 2023,
+      "month": 2,
+      "day": 3, // 採用通知日
+      "str": "次世代挑戦的研究者育成プロジェクトに採用(2023/4–2026/3)",
+      "url": null,
+    },
+    "2024_TateishiFoundation": {
+      "year": 2024,
+      "month": 2, // 採用通知月
+      "day": null,
+      "str": "立石科学技術振興財団研究助成(C) に採用(2024/4–2026/3)",
+      "url": null,
+    },
+  },
+}

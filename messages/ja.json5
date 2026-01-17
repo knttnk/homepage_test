@@ -19,6 +19,7 @@
     },
     "PublicationsPage": {
         "title": "研究業績",
+        "publication": "業績",
         "journal_papers": "学術雑誌掲載論文",
         "international_conference": "国際会議",
         "domestic_conference": "国内会議",

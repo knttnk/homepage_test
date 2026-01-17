@@ -1,0 +1,61 @@
+// publications_ja.json5 と同じ値になる場合は null または 省略
+{
+  "journal_papers": {
+    "2024_SoftwareX": {
+      "str": null,
+    },
+    "2024_ISCIE": {
+      "str": "Kenta Tanaka, Yuki Minami, Masato Ishikawa: Improving Efficiency of Reinforcement Learning by Information Alteration: A Case Study of Stabilizing Inverted Pendulum; Transactions of the Institute of Systems, Control and Information Engineers, Vol. 37, No. 8, pp. 234–236 (2024/08) (in Japanese)",
+    },
+    "2025_IEEE": {
+      "str": null,
+    },
+  },
+  "international_conference": {
+    "2021_SICE_AC": {
+      "str": null,
+    },
+    "2024_AROB": {
+      "str": null,
+    },
+    "2025_SICE_Festival": {
+      "str": null,
+    },
+  },
+  "domestic_conference": {
+    "2020_SICE": {
+      "str": "Kenta Tanaka, Yuki Minami, Masato Ishikawa: Development of Python Library NQLib for Design of Noise Shaping Quantizers; The 63rd Japan Joint Automatic Control Conference, pp. 474–477 (2020) (in Japanese)",
+    },
+    "2022_SICE": {
+      "str": "Kenta Tanaka, Yuki Minami, Masato Ishikawa: Alteration of Visual Information for Control Performance Improvement of Man-Machine Systems; The 65th Japan Joint Automatic Control Conference, pp. 824–827 (2022) (in Japanese)",
+    },
+    "2024_MSCS": {
+      "str": "Yuki Minami, Kenta Tanaka, Yugo Ogio: Control System Design with Python: What? Can we do this?; The 11th SICE Multi-Symposium on Control Systems, 3A7–2 (2024) (in Japanese)",
+    },
+    "2025_MSCS": {
+      "str": "Kenta Tanaka, Yuki Minami, Masato Ishikawa: Visual Information Alteration for Manual Control of Dynamic Systems with Unstable Zero; The 12th SICE Multi-Symposium on Control Systems, 1PS2–17 (2025) (in Japanese)",
+    },
+  },
+  "awards": {
+    "2021_SHASE_Student": {
+      "str": "Outstanding Student Award for Students from The Society of Heating, Air-Conditioning and Sanitary Engineers of Japan (FY2020)",
+    },
+    "2023_SICE_Student": {
+      "str": "Superior Student Award from The Society of Instrument and Control Engineers (FY2022)",
+    },
+    "2025_MSCS_poster": {
+      "str": "Poster Presentation Award of Multi-Symposium on Control Systems (2025)",
+    },
+  },
+  "others": {
+    "2021_Minidrone": {
+      "str": "Finalist in MathWorks Minidrone Competition Japan 2021",
+    },
+    "2023_NextGenResearcher": {
+      "str": "The Next Generation Researcher Development Project (April 2023 – March 2026)",
+    },
+    "2024_TateishiFoundation": {
+      "str": "Research Grant (C) from Tateisi Science and Technology Foundation (April 2024 – March 2026)",
+    },
+  },
+}
