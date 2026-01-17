@@ -17,6 +17,7 @@
     "@react-stately/color": "^3.9.3",
     "embla-carousel-react": "^8.6.0",
     "input-otp": "^1.4.2",
+    "json5": "^2.2.3",
     "motion": "^12.26.1",
     "next": "16.1.1",
     "next-intl": "^4.7.0",
