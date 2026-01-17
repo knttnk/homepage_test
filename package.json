@@ -10,6 +10,9 @@
     "serve:out": "npx serve@latest out -l 3000 --debug"
   },
   "dependencies": {
+    "@citation-js/core": "^0.7.21",
+    "@citation-js/plugin-bibtex": "^0.7.21",
+    "@citation-js/plugin-doi": "^0.7.21",
     "@heroicons/react": "^2.2.0",
     "@intentui/icons": "^1.11.0",
     "@internationalized/date": "^3.10.1",
