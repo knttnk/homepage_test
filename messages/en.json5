@@ -1,0 +1,37 @@
+{
+    "Common": {
+        "knttnk": "Kenta Tanaka"
+    },
+    "Manifest": {
+        "name": "Kenta Tanaka's Website at The University of Osaka",
+        "description": "Kenta Tanaka's Website at The University of Osaka"
+    },
+    "Metadata": {
+        "title": "Kenta Tanaka's Website at The University of Osaka"
+    },
+    "HomePage": {
+        "title": "Hello there!"
+    },
+    "ResearchPage": {
+        "title": "Research Introduction",
+        "virtual_dynamics": "Virtual Dynamics",
+        "virtual_dynamics_description_1": "In human-machine systems where humans operate machines (dynamic systems), we consider what kind of information should be presented to humans to improve the operability of the machines."
+    },
+    "PublicationsPage": {
+        "title": "Publications",
+        "journal_papers": "Journal Papers",
+        "international_conference": "International Conference",
+        "domestic_conference": "Domestic Conference (Japan)",
+        "awards": "Awards",
+        "others": "Others",
+    },
+    "Layout": {
+        "home": "Home",
+        "about_research": "Research",
+        "research": "Research",
+        "publications": "Publications",
+        "other": "Other",
+        "profile": "Profile",
+        "about": "About"
+    }
+}

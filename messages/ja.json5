@@ -1,0 +1,37 @@
+{
+    "Common": {
+        "knttnk": "田中 健太"
+    },
+    "Manifest": {
+        "name": "大阪大学 田中健太のホームページ",
+        "description": "大阪大学 田中健太のホームページ"
+    },
+    "Metadata": {
+        "title": "大阪大学 田中健太のホームページ"
+    },
+    "HomePage": {
+        "title": "こんにちはー"
+    },
+    "ResearchPage": {
+        "title": "研究紹介",
+        "virtual_dynamics": "仮想ダイナミクス",
+        "virtual_dynamics_description_1": "ヒトが機械（動的システム）を操作する「人間機械系」において，機械の操作性をどのような情報をヒトに提示するのが望ましいのかを考えます．"
+    },
+    "PublicationsPage": {
+        "title": "研究業績",
+        "journal_papers": "学術雑誌掲載論文",
+        "international_conference": "国際会議",
+        "domestic_conference": "国内会議",
+        "awards": "受賞",
+        "others": "その他",
+    },
+    "Layout": {
+        "home": "ホーム",
+        "about": "About",
+        "about_research": "研究",
+        "research": "研究紹介",
+        "publications": "研究業績",
+        "other": "その他",
+        "profile": "プロフィール"
+    }
+}
