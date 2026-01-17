@@ -19,7 +19,7 @@
     },
     "PublicationsPage": {
         "title": "Publications",
-        "publication": "Publication",
+        "detail": "Details",
         "journal_papers": "Journal Papers",
         "international_conference": "International Conference",
         "domestic_conference": "Domestic Conference (Japan)",

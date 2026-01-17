@@ -22,16 +22,19 @@ export default async function ResearchPage({ params }: { params: Promise<{ local
 	return (
 		<>
 			<Heading level={2}>{t('title')}</Heading>
-			{categories.map((category) => (
-				<Card key={category} className="[--card-spacing:var(--gutter)]">
-					<CardHeader>
-						<CardTitle>{t(category)}</CardTitle>
-					</CardHeader>
-					<CardContent>
-						<PublicationsTable publications={publications[category]} ariaLabel={t(category)} />
-					</CardContent>
-				</Card>
-			))}
+			{categories.map((category) => {
+				const items = publications[category].map((item, index) => ({ ...item, index: index + 1 }));
+				return (
+					<Card key={category} className="[--card-spacing:var(--gutter)]">
+						<CardHeader>
+							<CardTitle>{t(category)}</CardTitle>
+						</CardHeader>
+						<CardContent>
+							<PublicationsTable items={items} label={t(category)} publicationHeader={t('detail')} />
+						</CardContent>
+					</Card>
+				);
+			})}
 		</>
 	);
 }
