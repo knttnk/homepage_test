@@ -1,4 +1,8 @@
 'use client';
 export function InsetPadding({ children }: { children: React.ReactNode }) {
-	return <div className="p-4 lg:p-6">{children}</div>;
+	return (
+		<main>
+			<div className="p-4 lg:p-6 flex flex-col gap-6">{children}</div>
+		</main>
+	);
 }
