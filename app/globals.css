@@ -69,18 +69,25 @@
 }
 
 :root {
-  /* 基本的なスタイル */
-  --bg: #edfafe;
-  --fg: #021015;
-  --primary: #31616e;
-  --secondary: #ee7c82;
-  --accent: #f1a04a;
+  /* 基本5色 */
+  --bg-origin: #edfafe;
+  --fg-origin: #021015;
+  --primary-origin: #10483f;
+  --secondary-origin: #465faa;
+  --accent-origin: #3cbdd3;
+
+  /* モード適用 (Light Mode) */
+  --bg: var(--bg-origin);
+  --fg: var(--fg-origin);
+  --primary: var(--primary-origin);
+  --secondary: var(--secondary-origin);
+  --accent: var(--accent-origin);
 
   /* 派生色 - Base Colorsから自動生成 */
   --primary-fg: oklch(1 0 0);
   --primary-subtle: oklch(from var(--primary) l c h / 0.1);
   --primary-subtle-fg: var(--primary);
-  
+
   --secondary-fg: oklch(0.1 0 0);
   --accent-fg: oklch(0.1 0 0);
 
@@ -90,20 +97,20 @@
   /* 状態のスタイル */
   --muted: oklch(from var(--bg) calc(l - 0.04) c h);
   --muted-fg: oklch(from var(--fg) l c h / 0.6);
-  
+
   --success: oklch(0.596 0.145 163.225);
   --success-fg: oklch(1 0 0);
   --success-subtle: oklch(from var(--success) l c h / 0.15);
   --success-subtle-fg: oklch(from var(--success) calc(l - 0.2) c h);
-  
+
   --info-subtle: oklch(0.685 0.169 237.323 / 0.15);
   --info-subtle-fg: oklch(0.5 0.134 242.749);
-  
+
   --warning: oklch(0.828 0.189 84.429);
   --warning-fg: oklch(0.279 0.077 45.635);
   --warning-subtle: oklch(from var(--warning) l c h / 0.2);
   --warning-subtle-fg: oklch(from var(--warning) calc(l - 0.3) c h);
-  
+
   --danger: oklch(0.577 0.245 27.325);
   --danger-fg: oklch(0.971 0.013 17.38);
   --danger-subtle: oklch(from var(--danger) l c h / 0.15);
@@ -113,10 +120,10 @@
   --border: oklch(from var(--fg) l c h / 0.2);
   --input: oklch(from var(--fg) l c h / 0.2);
   --ring: var(--primary);
-  
+
   --navbar: oklch(from var(--bg) calc(l - 0.02) c h);
   --navbar-fg: var(--fg);
-  
+
   --sidebar: oklch(from var(--bg) calc(l - 0.02) c h);
   --sidebar-fg: var(--fg);
   --sidebar-primary: oklch(from var(--primary) l c h / 0.15);
@@ -142,11 +149,17 @@
 }
 
 .dark {
-  --bg: #010f13;
-  --fg: #e8f7fd;
-  --primary: #92c1ce;
-  --secondary: #7b0931;
-  --accent: #b4640e;
+  /* Dark Mode - Origin Colorsから自動生成 */
+  
+  /* 背景: 明度を落とす */
+  --bg: oklch(from var(--bg-origin) 0.1 c h);
+  /* 文字: 明度を上げる */
+  --fg: oklch(from var(--fg-origin) 0.98 c h);
+  
+  /* メインカラー: ダークモードで見やすいように明度調整 */
+  --primary: oklch(from var(--primary-origin) 0.75 c h);
+  --secondary: oklch(from var(--secondary-origin) 0.75 c h);
+  --accent: oklch(from var(--accent-origin) 0.8 c h);
 
   /* 派生色 - Base Colorsから自動生成 */
   --primary-fg: oklch(0 0 0);
@@ -157,7 +170,7 @@
 
   --overlay: var(--bg);
   --overlay-fg: var(--fg);
-  
+
   --muted: oklch(from var(--bg) calc(l + 0.05) c h);
   --muted-fg: oklch(from var(--fg) l c h / 0.6);
 
@@ -166,10 +179,10 @@
   --success-fg: oklch(1 0 0);
   --success-subtle: oklch(from var(--success) l c h / 0.15);
   --success-subtle-fg: oklch(0.765 0.177 163.223);
-  
+
   --info-subtle: oklch(0.685 0.169 237.323 / 0.1);
   --info-subtle-fg: oklch(0.828 0.111 230.318);
-  
+
   --warning: oklch(0.828 0.189 84.429);
   --warning-fg: oklch(0.279 0.077 45.635);
   --warning-subtle: oklch(from var(--warning) l c h / 0.1);
@@ -184,10 +197,10 @@
   --border: oklch(from var(--fg) l c h / 0.2);
   --input: oklch(from var(--fg) l c h / 0.2);
   --ring: var(--primary);
-  
+
   --navbar: oklch(from var(--bg) calc(l + 0.05) c h);
   --navbar-fg: var(--fg);
-  
+
   --sidebar: oklch(from var(--bg) calc(l + 0.05) c h);
   --sidebar-fg: var(--fg);
   --sidebar-primary: oklch(from var(--primary) l c h / 0.15);
@@ -202,4 +215,10 @@
   --chart-3: var(--accent);
   --chart-4: oklch(0.871 0.15 154.449);
   --chart-5: oklch(0.925 0.084 155.995);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  height: 100dvh;
 }
