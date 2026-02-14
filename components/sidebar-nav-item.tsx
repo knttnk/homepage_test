@@ -24,9 +24,13 @@ export function SidebarNavItem({ href, ...props }: ComponentProps<typeof Sidebar
 		<SidebarItem
 			isCurrent={isCurrent}
 			href={href}
-			onPress={(e) => {
-				setIsOpenOnMobile(false);
-			}}
+			onPress={
+				isCurrent
+					? undefined
+					: (e) => {
+							setIsOpenOnMobile(false);
+						}
+			}
 			{...props}
 		/>
 	);
