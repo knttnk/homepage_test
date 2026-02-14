@@ -1,10 +1,26 @@
 import { getRequestConfig } from 'next-intl/server';
-import { hasLocale } from 'next-intl';
+import { hasLocale, AbstractIntlMessages } from 'next-intl';
 import { routing } from './routing';
 
 import json5 from 'json5';
 import fs from 'fs/promises';
 import path from 'path';
+
+function processMessages(messages: unknown): unknown {
+	if (Array.isArray(messages)) {
+		if (messages.every((item): item is string => typeof item === 'string')) {
+			return messages.join('');
+		}
+		return messages.map(processMessages);
+	} else if (typeof messages === 'object' && messages !== null) {
+		const result: Record<string, unknown> = {};
+		for (const key in messages) {
+			result[key] = processMessages((messages as Record<string, unknown>)[key]);
+		}
+		return result;
+	}
+	return messages;
+}
 
 export default getRequestConfig(async ({ requestLocale }) => {
 	// Typically corresponds to the `[locale]` segment
@@ -17,6 +33,6 @@ export default getRequestConfig(async ({ requestLocale }) => {
 
 	return {
 		locale,
-		messages,
+		messages: processMessages(messages) as AbstractIntlMessages,
 	};
 });
