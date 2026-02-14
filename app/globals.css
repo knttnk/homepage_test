@@ -70,11 +70,11 @@
 
 :root {
   /* 基本5色 */
-  --bg-origin: #edfafe;
-  --fg-origin: #021015;
-  --primary-origin: #10483f;
-  --secondary-origin: #465faa;
-  --accent-origin: #3cbdd3;
+  --bg-origin: #f1f3f8;
+  --fg-origin: #010616;
+  --primary-origin: #1E377D;
+  --secondary-origin: #7D301E;
+  --accent-origin: #2f4a0b;
 
   /* モード適用 (Light Mode) */
   --bg: var(--bg-origin);
@@ -85,7 +85,7 @@
 
   /* 派生色 - Base Colorsから自動生成 */
   --primary-fg: oklch(1 0 0);
-  --primary-subtle: oklch(from var(--primary) l c h / 0.1);
+  --primary-subtle: oklch(from var(--primary) calc(l - 0.4) c h / 0.1);
   --primary-subtle-fg: var(--primary);
 
   --secondary-fg: oklch(0.1 0 0);
@@ -100,20 +100,20 @@
 
   --success: oklch(0.596 0.145 163.225);
   --success-fg: oklch(1 0 0);
-  --success-subtle: oklch(from var(--success) l c h / 0.15);
+  --success-subtle: oklch(from var(--success) calc(l - 0.4) c h / 0.15);
   --success-subtle-fg: oklch(from var(--success) calc(l - 0.2) c h);
 
-  --info-subtle: oklch(0.685 0.169 237.323 / 0.15);
+  --info-subtle: oklch(from oklch(0.685 0.169 237.323) calc(l - 0.4) c h / 0.15);
   --info-subtle-fg: oklch(0.5 0.134 242.749);
 
   --warning: oklch(0.828 0.189 84.429);
   --warning-fg: oklch(0.279 0.077 45.635);
-  --warning-subtle: oklch(from var(--warning) l c h / 0.2);
+  --warning-subtle: oklch(from var(--warning) calc(l - 0.4) c h / 0.2);
   --warning-subtle-fg: oklch(from var(--warning) calc(l - 0.3) c h);
 
   --danger: oklch(0.577 0.245 27.325);
   --danger-fg: oklch(0.971 0.013 17.38);
-  --danger-subtle: oklch(from var(--danger) l c h / 0.15);
+  --danger-subtle: oklch(from var(--danger) calc(l - 0.4) c h / 0.15);
   --danger-subtle-fg: var(--danger);
 
   /* その他UIコンポーネント */
@@ -126,9 +126,9 @@
 
   --sidebar: oklch(from var(--bg) calc(l - 0.02) c h);
   --sidebar-fg: var(--fg);
-  --sidebar-primary: oklch(from var(--primary) l c h / 0.15);
+  --sidebar-primary: oklch(from var(--primary) calc(l - 0.4) c h / 0.15);
   --sidebar-primary-fg: var(--primary);
-  --sidebar-accent: oklch(from var(--accent) l c h / 0.15);
+  --sidebar-accent: oklch(from var(--accent) calc(l - 0.4) c h / 0.15);
   --sidebar-accent-fg: var(--accent);
   --sidebar-border: oklch(from var(--fg) l c h / 0.1);
   --sidebar-ring: var(--ring);
@@ -149,70 +149,65 @@
 }
 
 .dark {
-  /* Dark Mode - Origin Colorsから自動生成 */
-  
-  /* 背景: 明度を落とす */
-  --bg: oklch(from var(--bg-origin) 0.1 c h);
-  /* 文字: 明度を上げる */
-  --fg: oklch(from var(--fg-origin) 0.98 c h);
-  
-  /* メインカラー: ダークモードで見やすいように明度調整 */
-  --primary: oklch(from var(--primary-origin) 0.75 c h);
-  --secondary: oklch(from var(--secondary-origin) 0.75 c h);
-  --accent: oklch(from var(--accent-origin) 0.8 c h);
+  /* Dark Mode - Base Colorsの明度を反転 */
+  --bg: oklch(from var(--bg-origin) calc(1 - l) c h);
+  --fg: oklch(from var(--fg-origin) calc(1 - l) c h);
+  --primary: oklch(from var(--primary-origin) calc(1 - l) c h);
+  --secondary: oklch(from var(--secondary-origin) calc(1 - l) c h);
+  --accent: oklch(from var(--accent-origin) calc(1 - l) c h);
 
   /* 派生色 - Base Colorsから自動生成 */
   --primary-fg: oklch(0 0 0);
-  --primary-subtle: oklch(from var(--primary) l c h / 0.1);
-  --primary-subtle-fg: var(--primary);
+  --primary-subtle: oklch(from var(--primary) calc(l + 0.4) c h / 0.1);
+  /* --primary-subtle-fg: var(--primary); */
   --secondary-fg: oklch(1 0 0);
   --accent-fg: oklch(1 0 0);
 
-  --overlay: var(--bg);
-  --overlay-fg: var(--fg);
+  /* --overlay: var(--bg); */
+  /* --overlay-fg: var(--fg); */
 
   --muted: oklch(from var(--bg) calc(l + 0.05) c h);
-  --muted-fg: oklch(from var(--fg) l c h / 0.6);
+  /* --muted-fg: oklch(from var(--fg) l c h / 0.6); */
 
   /* 状態のスタイル */
-  --success: oklch(0.596 0.145 163.225);
-  --success-fg: oklch(1 0 0);
-  --success-subtle: oklch(from var(--success) l c h / 0.15);
+  /* --success: oklch(0.596 0.145 163.225); */
+  /* --success-fg: oklch(1 0 0); */
+  --success-subtle: oklch(from var(--success) calc(l + 0.4) c h / 0.15);
   --success-subtle-fg: oklch(0.765 0.177 163.223);
 
-  --info-subtle: oklch(0.685 0.169 237.323 / 0.1);
+  --info-subtle: oklch(from oklch(0.685 0.169 237.323) calc(l + 0.4) c h / 0.1);
   --info-subtle-fg: oklch(0.828 0.111 230.318);
 
-  --warning: oklch(0.828 0.189 84.429);
-  --warning-fg: oklch(0.279 0.077 45.635);
-  --warning-subtle: oklch(from var(--warning) l c h / 0.1);
+  /* --warning: oklch(0.828 0.189 84.429); */
+  /* --warning-fg: oklch(0.279 0.077 45.635); */
+  --warning-subtle: oklch(from var(--warning) calc(l + 0.4) c h / 0.2);
   --warning-subtle-fg: var(--warning);
 
-  --danger: oklch(0.577 0.245 27.325);
-  --danger-fg: oklch(0.971 0.013 17.38);
-  --danger-subtle: oklch(from var(--danger) l c h / 0.1);
+  /* --danger: oklch(0.577 0.245 27.325); */
+  /* --danger-fg: oklch(0.971 0.013 17.38); */
+  --danger-subtle: oklch(from var(--danger) calc(l + 0.4) c h / 0.1);
   --danger-subtle-fg: oklch(from var(--danger) calc(l + 0.1) c h);
 
   /* その他UIコンポーネント */
-  --border: oklch(from var(--fg) l c h / 0.2);
-  --input: oklch(from var(--fg) l c h / 0.2);
-  --ring: var(--primary);
+  /* --border: oklch(from var(--fg) l c h / 0.2); */
+  /* --input: oklch(from var(--fg) l c h / 0.2); */
+  /* --ring: var(--primary); */
 
   --navbar: oklch(from var(--bg) calc(l + 0.05) c h);
-  --navbar-fg: var(--fg);
+  /* --navbar-fg: var(--fg); */
 
   --sidebar: oklch(from var(--bg) calc(l + 0.05) c h);
-  --sidebar-fg: var(--fg);
-  --sidebar-primary: oklch(from var(--primary) l c h / 0.15);
-  --sidebar-primary-fg: var(--primary);
-  --sidebar-accent: oklch(from var(--accent) l c h / 0.15);
-  --sidebar-accent-fg: var(--accent);
-  --sidebar-border: oklch(from var(--fg) l c h / 0.1);
-  --sidebar-ring: var(--ring);
+  /* --sidebar-fg: var(--fg); */
+  --sidebar-primary: oklch(from var(--primary) calc(l + 0.4) c h / 0.15);
+  /* --sidebar-primary-fg: var(--primary); */
+  --sidebar-accent: oklch(from var(--accent) calc(l + 0.4) c h / 0.15);
+  /* --sidebar-accent-fg: var(--accent); */
+  /* --sidebar-border: oklch(from var(--fg) l c h / 0.1); */
+  /* --sidebar-ring: var(--ring); */
 
-  --chart-1: var(--primary);
-  --chart-2: var(--secondary);
-  --chart-3: var(--accent);
+  /* --chart-1: var(--primary); */
+  /* --chart-2: var(--secondary); */
+  /* --chart-3: var(--accent); */
   --chart-4: oklch(0.871 0.15 154.449);
   --chart-5: oklch(0.925 0.084 155.995);
 }
