@@ -1,7 +1,7 @@
 "use client"
 
+import { useMemo } from "react"
 import { Line, LineChart as LineChartPrimitive, type LineProps } from "recharts"
-import type { NameType, ValueType } from "recharts/types/component/DefaultTooltipContent"
 import {
   type BaseChartProps,
   CartesianGrid,
@@ -18,14 +18,13 @@ import {
   YAxis,
 } from "./chart"
 
-export interface LineChartProps<TValue extends ValueType, TName extends NameType>
-  extends BaseChartProps<TValue, TName> {
+export interface LineChartProps extends BaseChartProps {
   connectNulls?: boolean
   lineProps?: LineProps
   chartProps?: Omit<React.ComponentProps<typeof LineChartPrimitive>, "data" | "stackOffset">
 }
 
-export function LineChart<TValue extends ValueType, TName extends NameType>({
+export function LineChart({
   data = [],
   dataKey,
   colors = DEFAULT_COLORS,
@@ -58,8 +57,17 @@ export function LineChart<TValue extends ValueType, TName extends NameType>({
   chartProps,
   lineProps,
   ...props
-}: LineChartProps<TValue, TName>) {
-  const categoryColors = constructCategoryColors(Object.keys(config), colors)
+}: LineChartProps) {
+  const configKeys = useMemo(() => Object.keys(config), [config])
+  const categoryColors = useMemo(
+    () => constructCategoryColors(configKeys, colors),
+    [configKeys, colors],
+  )
+
+  const configEntries = useMemo(
+    () => configKeys.map((category) => [category, config[category]] as const),
+    [config, configKeys],
+  )
 
   return (
     <Chart config={config} data={data} dataKey={dataKey} {...props}>
@@ -108,8 +116,9 @@ export function LineChart<TValue extends ValueType, TName extends NameType>({
           )}
 
           {!children
-            ? Object.entries(config).map(([category, values]) => {
+            ? configEntries.map(([category, values]) => {
                 const strokeOpacity = selectedLegend && selectedLegend !== category ? 0.1 : 1
+                const color = getColorValue(values.color || categoryColors.get(category))
 
                 return (
                   <Line
@@ -118,12 +127,12 @@ export function LineChart<TValue extends ValueType, TName extends NameType>({
                     name={category}
                     type="linear"
                     dataKey={category}
-                    stroke={getColorValue(values.color || categoryColors.get(category))}
+                    stroke={color}
                     style={
                       {
                         strokeOpacity,
                         strokeWidth: 2,
-                        "--line-color": getColorValue(values.color || categoryColors.get(category)),
+                        "--line-color": color,
                       } as React.CSSProperties
                     }
                     strokeLinejoin="round"
