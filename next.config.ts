@@ -19,8 +19,11 @@ const nextConfig: NextConfig = {
 
   productionBrowserSourceMaps: isProduction,
   webpack: (config, { dev, isServer }) => {
-    // サーバーサイド(Node.js)のソースマップ
-    if (!dev) {
+    // 開発環境ではソースマップを無効化
+    if (dev) {
+      config.devtool = false;
+    } else {
+      // サーバーサイド(Node.js)のソースマップ
       config.devtool = 'source-map';
     }
     return config;
