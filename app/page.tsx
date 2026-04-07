@@ -6,6 +6,8 @@ import { routing } from '@/i18n/routing';
 import { SidebarNav, SidebarTrigger } from '@/components/ui/sidebar';
 import { Text } from '@/components/ui/text';
 import { InsetPadding } from '@/components/inset-padding';
+import { Link } from '@/components/ui/link';
+import { buttonStyles } from "@/components/ui/button";
 
 /** ブラウザの言語設定を検出し、対応する言語コードを返す．
  *  わからなければ "ja" を返す．
@@ -39,8 +41,10 @@ export default function RootPage() {
 		<InsetPadding>
 			<Text>Redirecting...</Text>
 			<Text>You should enable JavaScript to use this site.</Text>
+			<Link href="/en" className={buttonStyles({ intent: "primary" })} >Open manually</Link>
 			<Text>リダイレクトしています．</Text>
 			<Text>このサイトの閲覧には，JavaScriptが必要です．</Text>
+			<Link href="/ja" className={buttonStyles({ intent: "primary" })} >手動で開く</Link>
 		</InsetPadding>
 	);
 }
