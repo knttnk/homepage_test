@@ -13,6 +13,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
+            "preLaunchTask": "キャッシュ削除",
         },
         {
             "name": "ビルド",

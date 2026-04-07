@@ -20,6 +20,11 @@
                     }
                 }
             ]
+        },
+        {
+            "type": "shell",
+            "label": "キャッシュ削除",
+            "command": "rm -rf .next node_modules/.cache out",
         }
     ]
 }
