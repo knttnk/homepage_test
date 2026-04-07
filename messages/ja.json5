@@ -36,6 +36,62 @@
         "awards": "受賞",
         "others": "その他",
     },
+    "ProfilePage": {
+        "title": "プロフィール",
+        "name_label": "氏名",
+        "affiliation_label": "所属",
+        "birth_date_label": "生年月日",
+        "birth_date_value": "1999年2月11日",
+        "career_date_header": "年月",
+        "career_description_header": "略歴",
+        "career_items": [
+            { "date": "2014年4月", "description": "千葉県立東葛飾高等学校普通科 入学" },
+            { "date": "2017年3月", "description": "千葉県立東葛飾高等学校普通科 卒業" },
+            { "date": "2017年4月", "description": "大阪大学 工学部 応用理工学科 入学" },
+            { "date": "2021年3月", "description": "大阪大学 工学部 応用理工学科 卒業" },
+            { "date": "2021年4月", "description": "大阪大学大学院 工学研究科 機械工学専攻 博士前期課程 入学" },
+            { "date": "2023年3月", "description": "大阪大学大学院 工学研究科 機械工学専攻 博士前期課程 修了" },
+            { "date": "2023年4月", "description": "大阪大学大学院 工学研究科 機械工学専攻 博士後期課程 入学" },
+            { "date": "2026年3月", "description": "大阪大学大学院 工学研究科 機械工学専攻 博士後期課程 修了" },
+            { "date": "2026年4月", "description": "兵庫県立大学 大学院工学研究科 助教" },
+        ],
+        "works_title": "制作物",
+        "works_items": [
+            {
+                "title": "NQLib",
+                "description": "Pythonによる，離散値制御のための動的量子化器の設計ライブラリ．",
+                "url": "https://github.com/knttnk/NQLib/"
+            },
+            {
+                "title": "The Inverted Pendulum Game",
+                "description": "情報改変の効果を体験できる，倒立振子を制御するゲーム．",
+                "url": "https://knttnk.github.io/pendulum_game_web/"
+            },
+            {
+                "title": "iscie.bst",
+                "description": "非公式のISCIE用BibTeXスタイルファイル．",
+                "url": "https://github.com/knttnk/iscie_bst/"
+            },
+            {
+                "title": "Snippet Utilities",
+                "description": "VS Codeでコードのテンプレを簡単に登録するための拡張機能．",
+                "url": "https://marketplace.visualstudio.com/items?itemName=knttnk.snippet-utilities"
+            },
+            {
+                "title": "カスタム日本語校正",
+                "description": "VS Codeで日本語を形態素解析や正規表現に基づいて自動校正できる拡張機能．",
+                "url": "https://marketplace.visualstudio.com/items?itemName=knttnk.custom-japanese-proofreading"
+            }
+        ],
+        "contact_title": "連絡先",
+        "github_label": "GitHub",
+        "twitter_label": "X (Twitter)",
+        "address_label": "住所",
+        "address_value": ["〒671-2280", "兵庫県姫路市書写2167"],
+        "email_label": "メールアドレス",
+        "email_value": "kenta.tanaka.j@gmail.com",
+        "copy_button": "Copy"
+    },
     "Layout": {
         "home": "ホーム",
         "about": "About",

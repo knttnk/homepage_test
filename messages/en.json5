@@ -36,6 +36,63 @@
         "awards": "Awards",
         "others": "Others",
     },
+    "ProfilePage": {
+        "title": "Profile",
+        "name_label": "Name",
+        "affiliation_label": "Affiliation",
+        "birth_date_label": "Date of Birth",
+        "birth_date_value": "February 11, 1999",
+        "career_title": "Education & Career",
+        "career_date_header": "Date",
+        "career_description_header": "Description",
+        "career_items": [
+            { "date": "Apr 2014", "description": "Enrolled in Chiba Prefectural Togasaki High School" },
+            { "date": "Mar 2017", "description": "Graduated from Chiba Prefectural Togasaki High School" },
+            { "date": "Apr 2017", "description": "Enrolled in Osaka University, Faculty of Engineering, Department of Applied Physics" },
+            { "date": "Mar 2021", "description": "Graduated from Osaka University, Faculty of Engineering, Department of Applied Physics" },
+            { "date": "Apr 2021", "description": "Enrolled in Osaka University Graduate School, Department of Mechanical Engineering, Master's Program" },
+            { "date": "Mar 2023", "description": "Completed Osaka University Graduate School, Department of Mechanical Engineering, Master's Program" },
+            { "date": "Apr 2023", "description": "Enrolled in Osaka University Graduate School, Department of Mechanical Engineering, Doctoral Program" },
+            { "date": "Mar 2026", "description": "Completed Osaka University Graduate School, Department of Mechanical Engineering, Doctoral Program" },
+            { "date": "Apr 2026", "description": "Assistant Professor, Graduate School of Engineering, University of Hyogo" },
+        ],
+        "works_title": "Works",
+        "works_items": [
+            {
+                "title": "NQLib",
+                "description": "A Python library for designing dynamic quantizers for discrete-value control.",
+                "url": "https://github.com/knttnk/NQLib/"
+            },
+            {
+                "title": "The Inverted Pendulum Game",
+                "description": "A game to control an inverted pendulum and experience the effects of information modification.",
+                "url": "https://knttnk.github.io/pendulum_game_web/"
+            },
+            {
+                "title": "iscie.bst",
+                "description": "Unofficial BibTeX style file for ISCIE.",
+                "url": "https://github.com/knttnk/iscie_bst/"
+            },
+            {
+                "title": "Snippet Utilities",
+                "description": "VS Code extension for easily registering code templates.",
+                "url": "https://marketplace.visualstudio.com/items?itemName=knttnk.snippet-utilities"
+            },
+            {
+                "title": "Custom Japanese Proofreading",
+                "description": "VS Code extension for automatic Japanese proofreading based on morphological analysis and regular expressions.",
+                "url": "https://marketplace.visualstudio.com/items?itemName=knttnk.custom-japanese-proofreading"
+            }
+        ],
+        "contact_title": "Contact",
+        "github_label": "GitHub",
+        "twitter_label": "X (Twitter)",
+        "address_label": "Address",
+        "address_value": ["〒671-2280", "2167 Shosho, Himeji-shi, Hyogo Prefecture"],
+        "email_label": "Email",
+        "email_value": "kenta.tanaka.j@gmail.com",
+        "copy_button": "Copy"
+    },
     "Layout": {
         "home": "Home",
         "about": "About",
