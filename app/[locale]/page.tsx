@@ -8,6 +8,9 @@ import { Heading } from '@/components/ui/heading';
 import Image from 'next/image';
 import { InsetPadding } from '@/components/inset-padding';
 import { Carousel, CarouselButton, CarouselContent, CarouselHandler, CarouselItem } from '@/components/ui/carousel';
+import conceptEn from '@/public/mines/concept-en.webp';
+import conceptJa from '@/public/mines/concept-ja.webp';
+import { Link } from '@/components/ui/link';
 
 export function generateStaticParams() {
 	return routing.locales.map((locale) => ({ locale }));
@@ -33,17 +36,17 @@ export default function IndexPage({ params }: { params: Promise<{ locale: string
 			<InsetPadding>
 				<Carousel opts={{ loop: true }} className="w-full">
 					<CarouselContent>
-						<CarouselItem className="w-50 aspect-auto">
-							<Card>
-								<CardContent>
-									<div style={{ position: 'relative', width: '25rem', height: '25rem' }}>
-										<Image src={`/mines/concept-${locale}.webp`} alt="Concept Art" fill style={{ objectFit: 'contain' }} loading="eager" />
-									</div>
-								</CardContent>
-								<CardFooter>
-									<Text>{tResearch('title')}</Text>
-								</CardFooter>
-							</Card>
+						<CarouselItem className="basis-[min(25rem,70vw)]">
+							<Link href={`/${locale}/research`}>
+								<Card>
+									<CardHeader>
+										<Text>{tResearch('title')}</Text>
+									</CardHeader>
+									<CardContent>
+										<Image src={locale === 'ja' ? conceptJa : conceptEn} alt={tResearch('title')} loading="eager" />
+									</CardContent>
+								</Card>
+							</Link>
 						</CarouselItem>
 						<CarouselItem>
 							<Card>
