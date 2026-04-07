@@ -13,6 +13,8 @@ const nextConfig: NextConfig = {
   // 静的サイトとしてエクスポート
   output: "export",
 
+  reactStrictMode: true,
+
   images: {
     unoptimized: true  // GitHub Pages では _next の最適化機能を利用できないため無効
   },
@@ -25,6 +27,10 @@ const nextConfig: NextConfig = {
     } else {
       // サーバーサイド(Node.js)のソースマップ
       config.devtool = 'source-map';
+    }
+    config.watchOptions = {
+      poll: 1000,
+      aggregateTimeout: 300
     }
     return config;
   },
