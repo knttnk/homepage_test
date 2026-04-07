@@ -7,6 +7,7 @@ import {
 	SidebarFooter,
 	SidebarHeader,
 	SidebarInset,
+	SidebarItem,
 	SidebarLabel,
 	SidebarNav,
 	SidebarRail,
@@ -28,6 +29,7 @@ import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { setRequestLocale } from 'next-intl/server';
+import { Text } from '@/components/ui/text';
 
 export async function generateMetadata(
 	params: Promise<{
@@ -57,6 +59,8 @@ export default async function LocaleLayout({ children, params }: { children: Rea
 						<Link href={`/${locale}/`}>
 							<SidebarLabel>{tc('knttnk')}</SidebarLabel>
 						</Link>
+						<Text>{tc('affiliation_long_1')}</Text>
+						<Text>{tc('affiliation_long_2')}</Text>
 					</SidebarHeader>
 					<SidebarContent>
 						<SidebarSection>
@@ -89,6 +93,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
 						<Link href={`/${locale}/`}>
 							<Heading level={1}>{tc('knttnk')}</Heading>
 						</Link>
+						<Text>{tc('affiliation_short')}</Text>
 					</Header>
 					<InsetPadding>{children}</InsetPadding>
 				</SidebarInset>

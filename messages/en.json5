@@ -1,21 +1,31 @@
 {
     "Common": {
-        "knttnk": "Kenta Tanaka"
+        "knttnk": "Kenta Tanaka",
+        "affiliation_long": "Assistant Professor, Department of Intelligent Information, Graduate School of Engineering, University of Hyogo",
+        "affiliation_short": "Assistant Professor, University of Hyogo",
+        "affiliation_long_1": "Graduate School of Engineering, University of Hyogo",
+        "affiliation_long_2": "Assistant Professor, Department of Intelligent Information",
     },
     "Manifest": {
-        "name": "Kenta Tanaka's Website at The University of Osaka",
-        "description": "Kenta Tanaka's Website at The University of Osaka"
+        "name": "Kenta Tanaka's Website at The University of Hyogo",
+        "description": "Kenta Tanaka's Website at The University of Hyogo"
     },
     "Metadata": {
-        "title": "Kenta Tanaka's Website at The University of Osaka"
+        "title": "Kenta Tanaka's Website at The University of Hyogo"
     },
     "HomePage": {
-        "title": "Hello there!"
+        "description": "This page is under construction. Please check out my profile and research achievements."
     },
     "ResearchPage": {
         "title": "Research Introduction",
         "virtual_dynamics": "Virtual Dynamics",
-        "virtual_dynamics_description_1": "In human-machine systems where humans operate machines (dynamic systems), we consider what kind of information should be presented to humans to improve the operability of the machines."
+        "virtual_dynamics_description_1": [
+            "Research to improve control results by intentionally presenting modified information to humans or agents controlling systems, making the systems appear easier to control.",
+        ],
+        "virtual_dynamics_description_2": [
+            "Systems only become meaningful through 'control' that brings them to the desired state.",
+            "For example, automobiles and drones are guided to their destinations through appropriate routes by humans driving or AI performing autonomous driving.",
+        ],
     },
     "PublicationsPage": {
         "title": "Publications",
@@ -28,11 +38,11 @@
     },
     "Layout": {
         "home": "Home",
+        "about": "About",
         "about_research": "Research",
         "research": "Research",
         "publications": "Publications",
         "other": "Other",
-        "profile": "Profile",
-        "about": "About"
+        "profile": "Profile"
     }
 }

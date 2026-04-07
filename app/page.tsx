@@ -3,7 +3,6 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { routing } from '@/i18n/routing';
-import { SidebarNav, SidebarTrigger } from '@/components/ui/sidebar';
 import { Text } from '@/components/ui/text';
 import { InsetPadding } from '@/components/inset-padding';
 import { Link } from '@/components/ui/link';

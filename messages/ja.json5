@@ -1,16 +1,20 @@
 {
     "Common": {
-        "knttnk": "田中 健太"
+        "knttnk": "田中 健太",
+        "affiliation_long": "兵庫県立大学 大学院工学研究科 知能情報 助教",
+        "affiliation_short": "兵庫県立大学 助教",
+        "affiliation_long_1": "兵庫県立大学 大学院工学研究科",
+        "affiliation_long_2": "知能情報 助教",
     },
     "Manifest": {
-        "name": "大阪大学 田中健太のホームページ",
-        "description": "大阪大学 田中健太のホームページ"
+        "name": "兵庫県立大学 田中健太のホームページ",
+        "description": "兵庫県立大学 田中健太のホームページ"
     },
     "Metadata": {
-        "title": "大阪大学 田中健太のホームページ"
+        "title": "兵庫県立大学 田中健太のホームページ"
     },
     "HomePage": {
-        "title": "こんにちはー"
+        "description": "このページは工事中です．プロフィールや研究業績をご覧ください"
     },
     "ResearchPage": {
         "title": "研究紹介",
