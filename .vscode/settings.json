@@ -1,5 +1,6 @@
 {
-  "typescript.tsdk": "node_modules/typescript/lib",
+  "js/ts.tsdk.path": "${workspaceFolder}/.vfox/sdks/nodejs/node_modules/typescript/lib",
+  "js/ts.tsserver.node.path": "${workspaceFolder}/.vfox/sdks/nodejs/node.exe",
   "[typescript][typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "prettier.printWidth": 150,

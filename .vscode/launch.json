@@ -9,46 +9,46 @@
                 "run",
                 "dev"
             ],
-            "runtimeExecutable": "npm",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "preLaunchTask": "キャッシュ削除",
-        },
-        {
-            "name": "ビルド",
-            "type": "node",
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "runtimeExecutable": "node",
-            "runtimeArgs": [
-                "--inspect",
-            ],
-            "program": "${workspaceFolder}/node_modules/next/dist/bin/next",
-            "args": [
-                "build"
-            ],
+            "runtimeExecutable": "${workspaceFolder}/.vfox/sdks/nodejs/npm.cmd",
             "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen",
-            "autoAttachChildProcesses": true,
-            "sourceMaps": true,
             "skipFiles": [
                 "<node_internals>/**"
-            ]
-        },
-        {
-            "name": "Chromeで起動",
-            "type": "chrome",
-            "preLaunchTask": "サーブ開始",
-            "request": "launch",
-            "url": "http://localhost:3000/",
-            "webRoot": "${workspaceFolder}",
-            "skipFiles": [
-                "chrome-extension://**"
             ],
-            "runtimeArgs": [
-                "--auto-open-devtools-for-tabs",
-            ]
-        }
+        },
+        // {
+        //     "name": "ビルド",
+        //     "type": "node",
+        //     "request": "launch",
+        //     "cwd": "${workspaceFolder}",
+        //     "runtimeExecutable": "node",
+        //     "runtimeArgs": [
+        //         "--inspect",
+        //     ],
+        //     "program": "${workspaceFolder}/node_modules/next/dist/bin/next",
+        //     "args": [
+        //         "build"
+        //     ],
+        //     "console": "integratedTerminal",
+        //     "internalConsoleOptions": "neverOpen",
+        //     "autoAttachChildProcesses": true,
+        //     "sourceMaps": true,
+        //     "skipFiles": [
+        //         "<node_internals>/**"
+        //     ]
+        // },
+        // {
+        //     "name": "Chromeで起動",
+        //     "type": "chrome",
+        //     "preLaunchTask": "サーブ開始",
+        //     "request": "launch",
+        //     "url": "http://localhost:3000/",
+        //     "webRoot": "${workspaceFolder}",
+        //     "skipFiles": [
+        //         "chrome-extension://**"
+        //     ],
+        //     "runtimeArgs": [
+        //         "--auto-open-devtools-for-tabs",
+        //     ]
+        // }
     ]
 }
