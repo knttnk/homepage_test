@@ -7,7 +7,7 @@
     "prettier.semi": true,
     "prettier.singleQuote": true,
     "prettier.trailingComma": "all",
-    "prettier.useTabs": true
+    "prettier.useTabs": true,
   },
   "[json][jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features",

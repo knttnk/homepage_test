@@ -95,7 +95,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
 						</Link>
 						<Text>{tc('affiliation_short')}</Text>
 					</Header>
-					<InsetPadding>{children}</InsetPadding>
+					{children}
 				</SidebarInset>
 			</SidebarProvider>
 		</Providers>

@@ -5,6 +5,7 @@ import { use } from 'react';
 import { Text } from '@/components/ui/text';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Heading } from '@/components/ui/heading';
+import { InsetPadding } from '@/components/inset-padding';
 
 export function generateStaticParams() {
 	return routing.locales.map((locale) => ({ locale }));
@@ -21,7 +22,7 @@ export default function ResearchPage({ params }: { params: Promise<{ locale: str
 	const t = useTranslations('ResearchPage');
 
 	return (
-		<>
+		<InsetPadding>
 			<Heading level={2}>{t('title')}</Heading>
 			<Card>
 				<CardHeader>{t('virtual_dynamics')}</CardHeader>
@@ -29,6 +30,6 @@ export default function ResearchPage({ params }: { params: Promise<{ locale: str
 					<Text>{t('virtual_dynamics_description_1')}</Text>
 				</CardContent>
 			</Card>
-		</>
+		</InsetPadding>
 	);
 }
