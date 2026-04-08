@@ -94,6 +94,10 @@ export default async function ProfilePage({ params }: { params: Promise<{ locale
 								{t('twitter_label')}
 								<IconOpenLink />
 							</ButtonLink>
+							<ButtonLink href="https://researchmap.jp/knttnk" target="_blank" rel="noopener noreferrer">
+								{t('researchmap_label')}
+								<IconOpenLink />
+							</ButtonLink>
 						</div>
 
 						{/* 住所とメール */}
