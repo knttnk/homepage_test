@@ -87,9 +87,12 @@
         "github_label": "GitHub",
         "twitter_label": "X (Twitter)",
         "address_label": "住所",
-        "address_value": ["〒671-2280", "兵庫県姫路市書写2167"],
+        "address_1": "〒671-2280",
+        "address_2": "兵庫県姫路市書写2167",
         "email_label": "メールアドレス",
-        "email_value": "kenta.tanaka.j@gmail.com",
+        "email_value": "kenta.tanaka.j +at+ gmail.com",
+        "phone_label": "電話番号",
+        "phone_value": "079-267-4981",
         "copy_button": "Copy"
     },
     "Layout": {

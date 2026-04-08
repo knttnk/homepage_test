@@ -88,9 +88,12 @@
         "github_label": "GitHub",
         "twitter_label": "X (Twitter)",
         "address_label": "Address",
-        "address_value": ["〒671-2280", "2167 Shosho, Himeji-shi, Hyogo Prefecture"],
+        "address_1": "671-2280",
+        "address_2": "2167 Shosha, Himeji-shi, Hyogo Prefecture, Japan",
         "email_label": "Email",
-        "email_value": "kenta.tanaka.j@gmail.com",
+        "email_value": "kenta.tanaka.j +at+ gmail.com",
+        "phone_label": "Phone",
+        "phone_value": "+81-79-267-4981",
         "copy_button": "Copy"
     },
     "Layout": {

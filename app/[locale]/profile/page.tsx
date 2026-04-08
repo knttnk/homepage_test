@@ -95,12 +95,13 @@ export default async function ProfilePage({ params }: { params: Promise<{ locale
 						<DescriptionList>
 							<DescriptionTerm>{t('address_label')}</DescriptionTerm>
 							<DescriptionDetails>
-								<div>〒671-2280</div>
-								<div>兵庫県姫路市書写2167</div>
+								{t('address_1')} <br />
+								{t('address_2')}
 							</DescriptionDetails>
-
 							<DescriptionTerm>{t('email_label')}</DescriptionTerm>
 							<DescriptionDetails>{t('email_value')}</DescriptionDetails>
+							<DescriptionTerm>{t('phone_label')}</DescriptionTerm>
+							<DescriptionDetails>{t('phone_value')}</DescriptionDetails>
 						</DescriptionList>
 					</div>
 				</CardContent>
