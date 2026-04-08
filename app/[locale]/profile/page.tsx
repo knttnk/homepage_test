@@ -99,19 +99,19 @@ export default async function ProfilePage({ params }: { params: Promise<{ locale
 						{/* 住所とメール */}
 						<DescriptionList>
 							<DescriptionTerm>{t('address_label')}</DescriptionTerm>
-							<DescriptionDetails className="flex items-center gap-2">
+							<DescriptionDetails className="flex items-center justify-between gap-2">
 								<span>
 									{t('address_1')} {t('address_2')}
 								</span>
 								<CopyButton copyText={addressText} />
 							</DescriptionDetails>
 							<DescriptionTerm>{t('email_label')}</DescriptionTerm>
-							<DescriptionDetails className="flex items-center gap-2">
+							<DescriptionDetails className="flex items-center justify-between gap-2">
 								<span>{emailText}</span>
 								<CopyButton copyText={emailText} />
 							</DescriptionDetails>
 							<DescriptionTerm>{t('phone_label')}</DescriptionTerm>
-							<DescriptionDetails className="flex items-center gap-2">
+							<DescriptionDetails className="flex items-center justify-between gap-2">
 								<span>{phoneText}</span>
 								<CopyButton copyText={phoneText} />
 							</DescriptionDetails>
