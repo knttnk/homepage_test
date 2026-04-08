@@ -7,7 +7,8 @@ import Image from 'next/image';
 import face2 from '@/public/mines/face2.webp';
 import { CareerTable } from './career-table';
 import { ButtonLink } from '@/components/button-link';
-import { IconOpenLink2, IconOpenLink } from '@intentui/icons';
+import { IconOpenLink } from '@intentui/icons';
+import { CopyButton } from '@/components/copy-button';
 
 export function generateStaticParams() {
 	return routing.locales.map((locale) => ({ locale }));
@@ -24,6 +25,10 @@ export default async function ProfilePage({ params }: { params: Promise<{ locale
 		index: index + 1,
 	}));
 	const workItems = t.raw('works_items') as Array<{ title: string; description: string; url: string }>;
+
+	const addressText = `${t('address_1')} ${t('address_2')}`;
+	const emailText = t('email_value');
+	const phoneText = t('phone_value');
 
 	return (
 		<InsetPadding>
@@ -94,14 +99,22 @@ export default async function ProfilePage({ params }: { params: Promise<{ locale
 						{/* 住所とメール */}
 						<DescriptionList>
 							<DescriptionTerm>{t('address_label')}</DescriptionTerm>
-							<DescriptionDetails>
-								{t('address_1')} <br />
-								{t('address_2')}
+							<DescriptionDetails className="flex items-center gap-2">
+								<span>
+									{t('address_1')} {t('address_2')}
+								</span>
+								<CopyButton copyText={addressText} />
 							</DescriptionDetails>
 							<DescriptionTerm>{t('email_label')}</DescriptionTerm>
-							<DescriptionDetails>{t('email_value')}</DescriptionDetails>
+							<DescriptionDetails className="flex items-center gap-2">
+								<span>{emailText}</span>
+								<CopyButton copyText={emailText} />
+							</DescriptionDetails>
 							<DescriptionTerm>{t('phone_label')}</DescriptionTerm>
-							<DescriptionDetails>{t('phone_value')}</DescriptionDetails>
+							<DescriptionDetails className="flex items-center gap-2">
+								<span>{phoneText}</span>
+								<CopyButton copyText={phoneText} />
+							</DescriptionDetails>
 						</DescriptionList>
 					</div>
 				</CardContent>
