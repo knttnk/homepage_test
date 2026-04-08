@@ -2,12 +2,12 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { InsetPadding } from '@/components/inset-padding';
-import { Link } from '@/components/ui/link';
 import { DescriptionDetails, DescriptionList, DescriptionTerm } from '@/components/ui/description-list';
 import Image from 'next/image';
 import face2 from '@/public/mines/face2.webp';
 import { CareerTable } from './career-table';
-import { WorkItemCard } from './works-section';
+import { ButtonLink } from '@/components/button-link';
+import { IconOpenLink2, IconOpenLink } from '@intentui/icons';
 
 export function generateStaticParams() {
 	return routing.locales.map((locale) => ({ locale }));
@@ -51,7 +51,6 @@ export default async function ProfilePage({ params }: { params: Promise<{ locale
 			</Card>
 
 			{/* 制作物 */}
-
 			<Card>
 				<CardHeader>
 					<CardTitle>{t('works_title')}</CardTitle>
@@ -59,7 +58,15 @@ export default async function ProfilePage({ params }: { params: Promise<{ locale
 				<CardContent>
 					<div className="space-y-4">
 						{workItems.map((item, index) => (
-							<WorkItemCard key={index} item={item} />
+							<div key={index} className="border-t pt-4 first:border-none first:pt-0 flex items-start justify-between gap-4">
+								<div className="flex-1">
+									<h3 className="font-semibold text-base mb-1">{item.title}</h3>
+									<p className="text-sm text-muted-fg mb-3">{item.description}</p>
+								</div>
+								<ButtonLink href={item.url} target="_blank" rel="noopener noreferrer" size="sq-md">
+									<IconOpenLink />
+								</ButtonLink>
+							</div>
 						))}
 					</div>
 				</CardContent>
@@ -74,17 +81,14 @@ export default async function ProfilePage({ params }: { params: Promise<{ locale
 					<div className="space-y-6">
 						{/* リンク */}
 						<div className="flex flex-wrap gap-3">
-							<Link href="https://github.com/knttnk" target="_blank" rel="noopener noreferrer" className="text-primary underline font-normal text-sm">
+							<ButtonLink href="https://github.com/knttnk" target="_blank" rel="noopener noreferrer">
 								{t('github_label')}
-							</Link>
-							<Link
-								href="https://twitter.com/Aqr_Tbn_eng"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="text-primary underline font-normal text-sm"
-							>
+								<IconOpenLink />
+							</ButtonLink>
+							<ButtonLink href="https://twitter.com/Aqr_Tbn_eng" target="_blank" rel="noopener noreferrer">
 								{t('twitter_label')}
-							</Link>
+								<IconOpenLink />
+							</ButtonLink>
 						</div>
 
 						{/* 住所とメール */}
