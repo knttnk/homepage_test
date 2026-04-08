@@ -22,7 +22,7 @@ export function CareerTable({ items, dateHeader, descriptionHeader }: CareerTabl
 	}));
 
 	return (
-		<Table bleed striped className="[--gutter:var(--card-spacing)] sm:[--gutter:var(--card-spacing)]">
+		<Table bleed striped className="[--gutter:var(--card-spacing)] sm:[--gutter:var(--card-spacing)]" aria-label="Career history">
 			<TableHeader>
 				<TableColumn className="w-0">{dateHeader}</TableColumn>
 				<TableColumn isRowHeader className="w-full">
