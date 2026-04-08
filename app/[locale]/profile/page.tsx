@@ -7,8 +7,7 @@ import { DescriptionDetails, DescriptionList, DescriptionTerm } from '@/componen
 import Image from 'next/image';
 import face2 from '@/public/mines/face2.webp';
 import { CareerTable } from './career-table';
-import { IconOpenLink2Fill } from '@intentui/icons';
-import { buttonStyles } from '@/components/ui/button';
+import { WorkItemCard } from './works-section';
 
 export function generateStaticParams() {
 	return routing.locales.map((locale) => ({ locale }));
@@ -52,6 +51,7 @@ export default async function ProfilePage({ params }: { params: Promise<{ locale
 			</Card>
 
 			{/* 制作物 */}
+
 			<Card>
 				<CardHeader>
 					<CardTitle>{t('works_title')}</CardTitle>
@@ -59,13 +59,7 @@ export default async function ProfilePage({ params }: { params: Promise<{ locale
 				<CardContent>
 					<div className="space-y-4">
 						{workItems.map((item, index) => (
-							<div key={index} className="border-t pt-4 first:border-none first:pt-0">
-								<h3 className="font-semibold text-base mb-1">{item.title}</h3>
-								<p className="text-sm text-muted-fg mb-3">{item.description}</p>
-								<Link href={item.url} target="_blank" rel="noopener noreferrer" className={buttonStyles()}>
-									<IconOpenLink2Fill />
-								</Link>
-							</div>
+							<WorkItemCard key={index} item={item} />
 						))}
 					</div>
 				</CardContent>
