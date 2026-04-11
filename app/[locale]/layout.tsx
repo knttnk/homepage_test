@@ -15,6 +15,7 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { setRequestLocale } from 'next-intl/server';
 import { Text } from '@/components/ui/text';
+import { LanguageSwitcher } from '@/components/language-switcher';
 
 export async function generateMetadata(
 	params: Promise<{
@@ -79,6 +80,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
 						<Text>{tc('affiliation_short')}</Text>
 					</Header>
 					{children}
+					<LanguageSwitcher />
 				</SidebarInset>
 			</SidebarProvider>
 		</Providers>
