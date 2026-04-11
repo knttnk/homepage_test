@@ -1,5 +1,6 @@
 import './globals.css';
 import { Noto_Sans_JP } from 'next/font/google';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { Metadata } from 'next';
 import { metadataFrom } from './metadata';
 import { routing } from '@/i18n/routing';
@@ -22,6 +23,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
 	return (
 		<html suppressHydrationWarning className={notosansjp.variable}>
 			<body>{children}</body>
+			<GoogleAnalytics gaId="G-7QRCL4J4CZ" />
 		</html>
 	);
 }
