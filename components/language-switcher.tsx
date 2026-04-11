@@ -3,7 +3,7 @@
 import { LanguageIcon } from '@heroicons/react/24/solid';
 import { usePathname, useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
-import { Menu, MenuContent, MenuItem } from '@/components/ui/menu';
+import { Menu, MenuContent, MenuHeader, MenuItem, MenuLabel, MenuTrigger } from '@/components/ui/menu';
 import { routing } from '@/i18n/routing';
 
 const languageLabels: Record<string, string> = {
@@ -24,7 +24,7 @@ function replaceLocaleInPath(pathname: string, targetLocale: string) {
 	return segments.join('/');
 }
 
-export function LanguageSwitcher() {
+export function LanguageSwitcher({ languageText }: { languageText: string }) {
 	const pathname = usePathname();
 	const router = useRouter();
 	const currentLocale = pathname.split('/')[1];
@@ -46,13 +46,14 @@ export function LanguageSwitcher() {
 						router.push(targetPath);
 					}}
 				>
+					<MenuHeader separator>{languageText}</MenuHeader>
 					{routing.locales.map((supportedLocale) => (
 						<MenuItem
 							id={supportedLocale}
 							key={supportedLocale}
 							className="data-hovered:bg-accent/20 data-focused:bg-accent/20 data-selected:bg-accent/15"
 						>
-							{languageLabels[supportedLocale] ?? supportedLocale.toUpperCase()}
+							<MenuLabel>{languageLabels[supportedLocale] ?? supportedLocale.toUpperCase()}</MenuLabel>
 						</MenuItem>
 					))}
 				</MenuContent>

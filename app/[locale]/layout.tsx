@@ -80,7 +80,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
 						<Text>{tc('affiliation_short')}</Text>
 					</Header>
 					{children}
-					<LanguageSwitcher />
+					<LanguageSwitcher languageText={tc('switch_language')} />
 				</SidebarInset>
 			</SidebarProvider>
 		</Providers>
