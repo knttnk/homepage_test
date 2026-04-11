@@ -1,29 +1,14 @@
 import { Metadata } from 'next';
 import { metadataFrom } from '../metadata';
 
-import {
-	Sidebar,
-	SidebarContent,
-	SidebarFooter,
-	SidebarHeader,
-	SidebarInset,
-	SidebarItem,
-	SidebarLabel,
-	SidebarNav,
-	SidebarRail,
-	SidebarSection,
-	SidebarTrigger,
-} from '@/components/ui/sidebar';
+import { Sidebar, SidebarContent, SidebarHeader, SidebarInset, SidebarLabel, SidebarSection, SidebarTrigger } from '@/components/ui/sidebar';
 import { SidebarNavItem } from '@/components/sidebar-nav-item';
 import { Providers } from '@/components/providers';
-import { ThemeSwitcher } from '@/components/theme-switcher';
 import { SidebarProvider } from '@/components/ui/sidebar';
 import { Link } from '@/components/ui/link';
 import { Heading } from '@/components/ui/heading';
-import { Breadcrumbs, BreadcrumbsItem } from '@/components/ui/breadcrumbs';
-import { HomeIcon, AcademicCapIcon, BookOpenIcon, Bars3Icon, UserCircleIcon } from '@heroicons/react/24/solid';
+import { HomeIcon, AcademicCapIcon, BookOpenIcon, UserCircleIcon } from '@heroicons/react/24/solid';
 import { Header } from '@/components/header';
-import { InsetPadding } from '@/components/inset-padding';
 import { hasLocale } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -68,6 +53,10 @@ export default async function LocaleLayout({ children, params }: { children: Rea
 								<HomeIcon />
 								<SidebarLabel>{t('home')}</SidebarLabel>
 							</SidebarNavItem>
+							<SidebarNavItem href={`/${locale}/profile`}>
+								<UserCircleIcon />
+								<SidebarLabel>{t('profile')}</SidebarLabel>
+							</SidebarNavItem>
 						</SidebarSection>
 						<SidebarSection label={t('about_research')}>
 							<SidebarNavItem href={`/${locale}/research`}>
@@ -77,12 +66,6 @@ export default async function LocaleLayout({ children, params }: { children: Rea
 							<SidebarNavItem href={`/${locale}/publications`}>
 								<BookOpenIcon />
 								<SidebarLabel>{t('publications')}</SidebarLabel>
-							</SidebarNavItem>
-						</SidebarSection>
-						<SidebarSection label={t('other')}>
-							<SidebarNavItem href={`/${locale}/profile`}>
-								<UserCircleIcon />
-								<SidebarLabel>{t('profile')}</SidebarLabel>
 							</SidebarNavItem>
 						</SidebarSection>
 					</SidebarContent>
